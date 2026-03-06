@@ -4,7 +4,7 @@ Diff two PDF files in git-style unified diff format.
 
 ## Requirements
 
-- Python 3.10+
+- Python 3.14
 - [pypdf](https://pypdf.readthedocs.io/)
 
 ## Installation
@@ -66,3 +66,20 @@ Color is automatically disabled when output is piped or redirected.
 ## Limitations
 
 PDF text extraction depends on how the PDF was created. Scanned (image-based) PDFs do not contain extractable text and will appear empty. Use an OCR tool such as [ocrmypdf](https://github.com/ocrmypdf/OCRmyPDF) to add a text layer before diffing.
+
+## Running tests
+
+```bash
+pytest
+```
+
+## Dev container
+
+A VS Code dev container is included for a zero-setup development environment.
+
+**Requirements:** [Docker](https://www.docker.com/) and the [Dev Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) extension.
+
+1. Open the project folder in VS Code
+2. When prompted, click **Reopen in Container** — or run **Dev Containers: Reopen in Container** from the command palette (`Ctrl+Shift+P`)
+
+The container uses Python 3.14 and installs all dependencies from `requirements.txt` automatically on first build.
